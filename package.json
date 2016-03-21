@@ -1,0 +1,41 @@
+{
+  "name": "weixinbot",
+  "version": "0.0.1",
+  "description": "个人微信API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run clean && babel src -d dist && babel test -d testd && DEBUG=WeixinBot node testd/index.js",
+    "clean": "rm -Rf dist testd",
+    "compile": "npm run clean && babel src -d dist",
+    "watch": "npm run clean && babel src -d dist --watch",
+    "install": "npm run compile",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckyadam/WeixinBot.git"
+  },
+  "keywords": [
+    "Weixin"
+  ],
+  "author": "luckyadam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luckyadam/WeixinBot/issues"
+  },
+  "homepage": "https://github.com/luckyadam/WeixinBot#readme",
+  "dependencies": {
+    "debug": "^2.2.0",
+    "qrcode-terminal": "^0.10.0",
+    "request": "^2.69.0",
+    "request-promise": "^2.0.1",
+    "touch": "^1.0.0",
+    "tough-cookie-filestore": "0.0.1",
+    "xml2json": "^0.9.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-preset-es2015-node4": "^2.0.3",
+    "babel-preset-stage-0": "^6.5.0"
+  }
+}
